@@ -3143,8 +3143,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style5 {
-			background-color: #ffffff;
-			color: #4E4852;
+			background-color: #2e3842;
+			color: #ffffff;
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
@@ -3152,7 +3152,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-				color: #2E3842;
+				color: #dfdfdf;
 			}
 
 			.wrapper.style5 hr {
@@ -3188,7 +3188,7 @@ input, select, textarea {
 			.wrapper.style5 input[type="email"],
 			.wrapper.style5 select,
 			.wrapper.style5 textarea {
-				background-color: rgba(0, 0, 0, 0.0375);
+				background-color: #ffffff;
 			}
 
 			.wrapper.style5 select {
@@ -3202,12 +3202,12 @@ input, select, textarea {
 
 			.wrapper.style5 input[type="checkbox"] + label,
 			.wrapper.style5 input[type="radio"] + label {
-				color: #4E4852;
+				color: #ffffff;
 			}
 
 				.wrapper.style5 input[type="checkbox"] + label:before,
 				.wrapper.style5 input[type="radio"] + label:before {
-					background: rgba(0, 0, 0, 0.0375);
+					background: #ffffff;
 				}
 
 			.wrapper.style5 input[type="checkbox"]:checked + label:before,
@@ -3274,7 +3274,7 @@ input, select, textarea {
 			.wrapper.style5 button,
 			.wrapper.style5 .button {
 				box-shadow: inset 0 0 0 2px #dfdfdf;
-				color: #2E3842;
+				color: #ffffff;
 			}
 
 				.wrapper.style5 input[type="submit"]:hover,
