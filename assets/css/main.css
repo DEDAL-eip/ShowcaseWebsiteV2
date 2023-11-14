@@ -166,9 +166,18 @@ input, select, textarea {
 		color: #fff;
 		font-weight: 800;
 		letter-spacing: 0.225em;
-		line-height: 1em;
-		margin: 0 0 1em 0;
 		text-transform: uppercase;
+		margin: 0 0 1em 0;
+		.modifyp {
+			text-transform: none;
+			font-size: 22px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: normal;
+			margin-top: 24px;
+			line-height: 32px;
+			
+		}
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
