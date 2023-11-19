@@ -12,7 +12,8 @@
   }
   
   .carousel-images img {
-    width: 30%;
+    width: 25%;
+    min-width : 200px;
     height: auto;
     display: block;
   }
@@ -35,4 +36,3 @@
   #nextBtn {
     right: 10px;
   }
-  
