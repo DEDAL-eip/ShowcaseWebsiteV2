@@ -16,6 +16,8 @@
     min-width : 200px;
     height: auto;
     display: block;
+    padding-left: 30px; /* Ajouter un espace à gauche des images */
+    padding-right: 30px;
   }
   
   button {
