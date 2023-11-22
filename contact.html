@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/language.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -26,10 +27,12 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="roadmap.html">Roadmap</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="download.html">Download</a></li>
+											<li><a id="M1" href="index.html">Home</a></li>
+											<li><a id="M2" href="roadmap.html">Roadmap</a></li>
+											<li><a id="M3" href="contact.html">Contact</a></li>
+											<li><a id="M4" href="download.html">Download</a></li>
+											<a href="#" onclick="changerLangue('fr')">Français</a>
+											<a href="#" onclick="changerLangue('en')">Anglais</a>
 										</ul>
 									</div>
 								</li>
@@ -40,22 +43,22 @@
 				<!-- Main -->
 				<article id="main">
 					<header>
-						<h2>Contact Form</h2>
+						<h2 id="T1">Contact Form</h2>
 					</header>
 					<section class="wrapper style5">
 						<div class="inner">
 								<section>
-									<h4>Form</h4>
+									<h4 id="T2">Form</h4>
 									<form action="https://formsubmit.co/arthur.decovemacker@epitech.eu" method="POST">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall">
-												<input type="text" name="name" id="name" value="" placeholder="Name" />
+												<input type="text" name="name" id="name" value="" placeholder="Name / Nom" />
 											</div>
 											<div class="col-6 col-12-xsmall">
 												<input type="email" name="email" id="email" value="" placeholder="Email" />
 											</div>
 											<div class="col-12">
-												<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+												<textarea name="message" id="message" placeholder="Enter your message / Saisissez votre message" rows="6"></textarea>
 											</div>
 											<div class="col-12">
 												<ul class="actions">
@@ -92,6 +95,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const langue = sessionStorage.getItem('langue');
+				if (langue === 'en') {
+      			document.getElementById('M1').innerHTML = "Home"
+   				document.getElementById('M2').innerHTML = "Roadmap"
+      			document.getElementById('M3').innerHTML = "Contact"
+      			document.getElementById('M4').innerHTML = "Download"
+				document.getElementById('T1').innerHTML = "Contact Form"
+				document.getElementById('T2').innerHTML = "Form"
+    			} else if (langue === 'fr') {
+      			document.getElementById('M1').innerHTML = "Accueil"
+      			document.getElementById('M2').innerHTML = "Roadmap"
+      			document.getElementById('M3').innerHTML = "Contact"
+      			document.getElementById('M4').innerHTML = "telecharger l'app"
+				document.getElementById('T1').innerHTML = "formulaire de contact"
+				document.getElementById('T2').innerHTML = "formulaire"
+ 				}
+
+			</script>
 
 	</body>
 </html>

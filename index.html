@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="assets/css/styles.css">
+		<script src="assets/js/language.js"></script>
+		<script>if (sessionStorage.getItem('langue') === null) { sessionStorage.setItem('langue', navigator.language)}</script>
 	</head>
 	<body class="landing is-preload">
 
@@ -27,10 +29,12 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="roadmap.html">Roadmap</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="download.html">Download</a></li>
+											<li><a id="M1" href="index.html">Home</a></li>
+											<li><a id="M2" href="roadmap.html">Roadmap</a></li>
+											<li><a id="M3" href="contact.html">Contact</a></li>
+											<li><a id="M4" href="download.html">Download</a></li>
+											<a href="#" onclick="changerLangue('fr')">Français</a>
+											<a href="#" onclick="changerLangue('en')">Anglais</a>
 										</ul>
 									</div>
 								</li>
@@ -42,22 +46,22 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>Dedal</h2>
-							<p>Organise your trip<br />
+							<p id="slogan1">Organise your trip<br />
 							discover your city<br />
 							in one click.</p>
 							<ul class="actions special">
-								<li><a href="images/DEDAL_V1.0.apk" download="dedal.apk" class="button primary">Download</a></li>
+								<li><a id="dl-b1" href="images/DEDAL_V1.0.apk" download="dedal.apk" class="button primary">Download</a></li>
 							</ul>
 						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
+						<a id="learn1" href="#one" class="more scrolly">Learn More</a>
 					</section>
 
 				<!-- One -->
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>What's Dedal<br /></h2>
-								<p>DEDAL is first of all the project of seven computer science students struggling to find places to visit in Lille that the whole group likes. Today this group of friends launches DEDAL, their mobile application that generates in a few clicks itineraries adapted to the users.<br />
+								<h2 id="T1">What's Dedal<br /></h2>
+								<p id="t1">DEDAL is first of all the project of seven computer science students struggling to find places to visit in Lille that the whole group likes. Today this group of friends launches DEDAL, their mobile application that generates in a few clicks itineraries adapted to the users.<br />
 									But DEDAL is also the simplicity to be able to visit a city and that in the best conditions.Whether you are visiting New York for a week in summer with no place to stay or eat or you are spending a weekend at mami's in the Creuse on a rainy day, DEDAL will give you all the keys to find your favorite places that will make you love the place you are in.</p>
 							</header>
 						</div>
@@ -67,9 +71,9 @@
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
 							<div class="image"><img src="images/group.jpg" alt="" /></div><div class="content">
-								<h2>the Team <br />
-								<p class="modifyp">Seven students from Lille, frustrated by the monotony of their city, gave birth to "Dedal". This revolutionary application allows people to create customized itineraries according to their preferences, revealing Lille's hidden treasures. Now, residents and visitors alike can explore the city in their own way, sampling art, gastronomy and history as they please.</p>
-							</div>
+								<h2 id="T2">the Team <br /></h2>
+								<p id="t2" class="modifyp">Seven students from Lille, frustrated by the monotony of their city, gave birth to "Dedal". This revolutionary application allows people to create customized itineraries according to their preferences, revealing Lille's hidden treasures. Now, residents and visitors alike can explore the city in their own way, sampling art, gastronomy and history as they please.</p>
+								</div>
 						</section>
 						<section class="spotlight">
 							<div class="carousel">
@@ -88,13 +92,13 @@
 						<div class="inner">
 							<header>
 								<h2>Dedal</h2>
-								<p>Organised your trip<br />
+								<p id="slogan2">Organise your trip<br />
 									discover your city<br />
 									in one clic.</p>
 							</header>
 							<ul class="actions stacked">
-								<li><a href="images/DEDAL_V1.0.apk" download="dedal.apk" class="button primary">Download</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
+								<li><a id="dl-b2" href="images/DEDAL_V1.0.apk" download="dedal.apk" class="button primary">Download</a></li>
+								<li><a id="learn2" href="#" class="button fit">Learn More</a></li>
 							</ul>
 						</div>
 					</section>
@@ -121,6 +125,40 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/script.js"></script>
+			<script>
+				const langue = sessionStorage.getItem('langue');
+				  if (langue === 'en') {
+					document.getElementById('M1').innerHTML = "Home"
+					document.getElementById('M2').innerHTML = "Roadmap"
+					document.getElementById('M3').innerHTML = "Contact"
+					document.getElementById('M4').innerHTML = "Download"
+					document.getElementById('slogan1').innerHTML ="Organised your trip<br />discover your city<br />in one clic."
+					document.getElementById('dl-b1').innerHTML = "Download"
+					document.getElementById('learn1').innerHTML = "Learn More"
+					document.getElementById('T1').innerText = "What's Dedal";
+					document.getElementById('t1').innerHTML = "DEDAL is first of all the project of seven computer science students struggling to find places to visit in Lille that the whole group likes. Today this group of friends launches DEDAL, their mobile application that generates in a few clicks itineraries adapted to the users.<br /> But DEDAL is also the simplicity to be able to visit a city and that in the best conditions.Whether you are visiting New York for a week in summer with no place to stay or eat or you are spending a weekend at mami's in the Creuse on a rainy day, DEDAL will give you all the keys to find your favorite places that will make you love the place you are in.";
+					document.getElementById('T2').innerText = "the Team "
+					document.getElementById('t2').innerText = "Seven students from Lille, frustrated by the monotony of their city, gave birth to 'Dedal'. This revolutionary application allows people to create customized itineraries according to their preferences, revealing Lille's hidden treasures. Now, residents and visitors alike can explore the city in their own way, sampling art, gastronomy and history as they please."
+					document.getElementById('slogan2').innerHTML ="Organised your trip<br />discover your city<br />in one clic."
+					document.getElementById('dl-b2').innerHTML = "Download"
+					document.getElementById('learn2').innerHTML = "Learn More"
+				  } else if (langue === 'fr') {
+					document.getElementById('M1').innerHTML = "Accueil"
+					document.getElementById('M2').innerHTML = "Roadmap"
+					document.getElementById('M3').innerHTML = "Contact"
+					document.getElementById('M4').innerHTML = "telecharger l'app"
+					document.getElementById('slogan1').innerHTML ="les chemin de<br /> votre culture"
+					document.getElementById('dl-b1').innerHTML = "telecharger l'app"
+					document.getElementById('learn1').innerHTML = "en savoir plus"
+					document.getElementById('T1').innerText = "Qu'est-ce que Dedal ?";
+					document.getElementById('t1').innerHTML = "DEDAL, c'est d'abord le projet de sept étudiants en informatique qui se battent pour trouver des lieux à visiter à Lille qui plaisent à l'ensemble du groupe. Aujourd'hui, ce groupe d'amis lance DEDAL, leur application mobile qui génère en quelques clics des itinéraires adaptés aux utilisateurs.<br /> Mais DEDAL c'est aussi la simplicité pour pouvoir visiter une ville et cela dans les meilleures conditions. Que vous visitiez New York pour une semaine en été sans pouvoir vous loger ou vous restaurer ou que vous passiez un week-end chez mami dans la Creuse un jour de pluie, DEDAL vous donnera toutes les clés pour trouver vos lieux préférés qui vous feront aimer l'endroit où vous vous trouvez.";
+					document.getElementById('T2').innerText = "l'équipe !"
+					document.getElementById('t2').innerText = "Sept étudiants lillois, frustrés par la monotonie de leur ville, ont donné naissance à 'Dedal'. Cette application révolutionnaire permet de créer des itinéraires personnalisés en fonction de ses préférences, révélant les trésors cachés de Lille. Désormais, les habitants et les visiteurs peuvent explorer la ville à leur manière, en goûtant à l'art, à la gastronomie et à l'histoire."
+					document.getElementById('slogan2').innerHTML ="les chemin de<br /> votre culture"
+					document.getElementById('dl-b2').innerHTML = "telecharger l'app"
+					document.getElementById('learn2').innerHTML = "en savoir plus"
+				}
+			  </script>
 
 	</body>
 </html>

@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/language.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -26,10 +27,12 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="roadmap.html">Roadmap</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="download.html">Download</a></li>
+											<li><a id="M1" href="index.html">Home</a></li>
+											<li><a id="M2" href="roadmap.html">Roadmap</a></li>
+											<li><a id="M3" href="contact.html">Contact</a></li>
+											<li><a id="M4" href="download.html">Download</a></li>
+											<a href="#" onclick="changerLangue('fr')">Français</a>
+											<a href="#" onclick="changerLangue('en')">Anglais</a>
 										</ul>
 									</div>
 								</li>
@@ -45,10 +48,10 @@
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<h3>What is a roadmap?</h3>
-								<p>A roadmap is a project management and strategic planning tool that defines and communicates the objectives, milestones and vision of a project or company over a given period. It's a visual document that presents in chronological order the various steps to be taken to achieve the set objectives.</p>
+								<h3 id="T1">What is a roadmap?</h3>
+								<p id="t1">A roadmap is a project management and strategic planning tool that defines and communicates the objectives, milestones and vision of a project or company over a given period. It's a visual document that presents in chronological order the various steps to be taken to achieve the set objectives.</p>
 							</div>
-							<pre class="mermaid" style="text-align: center; ">
+							<pre id="roadmap" class="mermaid" style="text-align: center; ">
 								timeline
 								title Roadmap
 								section first year
@@ -91,6 +94,27 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const langue = sessionStorage.getItem('langue');
+				if (langue === 'en') {
+      			document.getElementById('M1').innerHTML = "Home"
+   				document.getElementById('M2').innerHTML = "Roadmap"
+      			document.getElementById('M3').innerHTML = "Contact"
+      			document.getElementById('M4').innerHTML = "Download"
+				document.getElementById('T1').innerHTML = "What is a roadmap?"
+				document.getElementById('t1').innerHTML = "A roadmap is a project management and strategic planning tool that defines and communicates the objectives, milestones and vision of a project or company over a given period. It's a visual document that presents in chronological order the various steps to be taken to achieve the set objectives."
+				document.getElementById('roadmap').innerHTML = "timeline \n title Roadmap \n section first year \n September 2021 : ideation phase \n September 2021 : Moonshot \nJanuary 2022 : start of development phase \n section second year \n April 2023 : beta version of the app \n May  2023 : beta test \n August 2023 : user feedback \n section third year \n October 2023 : Warm-up Days.  \nJanuary 2024 : launch of the app"
+    			} else if (langue === 'fr') {
+      			document.getElementById('M1').innerHTML = "Accueil"
+      			document.getElementById('M2').innerHTML = "Roadmap"
+      			document.getElementById('M3').innerHTML = "Contact"
+      			document.getElementById('M4').innerHTML = "telecharger l'app"
+				document.getElementById('T1').innerHTML = "Qu'est-ce qu'une roadmap"
+				document.getElementById('t1').innerHTML = "Une roadmap est un outil de gestion de projet et de planification stratégique qui définit et communique les objectifs, les étapes et la vision d'un projet ou d'une entreprise sur une période donnée. Il s'agit d'un document visuel qui présente dans l'ordre chronologique les différentes étapes à franchir pour atteindre les objectifs fixés."
+				document.getElementById('roadmap').innerHTML = "timeline \n title Roadmap \n section première année \n Septembre 2021 : phase d'idéation \n Septembre 2021 : Moonshot \n Janvier 2022 : début de la phase de développement \n section deuxième année \n Avril 2023 : version bêta de l'application \n Mai  2023 : bêta-test \n Août 2023 : retour utilisateur \n section troisième année \n Octobre 2023 : Warm-up Days.  \nJanvier 2024 : lancement de l'application"
+  				}
+
+			</script>
 
 	</body>
 </html>

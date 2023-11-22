@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/language.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -26,10 +27,12 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="roadmap.html">Roadmap</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="download.html">Download</a></li>
+											<li><a id="M1" href="index.html">Home</a></li>
+											<li><a id="M2" href="roadmap.html">Roadmap</a></li>
+											<li><a id="M3" href="contact.html">Contact</a></li>
+											<li><a id="M4" href="download.html">Download</a></li>
+											<a href="#" onclick="changerLangue('fr')">Français</a>
+											<a href="#" onclick="changerLangue('en')">Anglais</a>
 										</ul>
 									</div>
 								</li>
@@ -40,31 +43,31 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Install our application</h2>
+							<h2 id="T1">Install our application</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
-								<h3>How do I access your application?</h3>
-								<p>Nothing could be simpler: just download the Apk from the "Download" button on this page or on the home page (we recommend you do this from your cell phone). Once you've downloaded the Apk from your cell phone, simply follow the tutorial below to install it.</p>
+								<h3 id="T2">How do I access your application?</h3>
+								<p id="t1">Nothing could be simpler: just download the Apk from the "Download" button on this page or on the home page (we recommend you do this from your cell phone). Once you've downloaded the Apk from your cell phone, simply follow the tutorial below to install it.</p>
 							</div>
 							<ul class="actions special">
-								<li><a href="images/DEDAL_V1.0.apk" download="dedal.apk" class="button primary">Download</a></li>
+								<li><a id="button" href="images/DEDAL_V1.0.apk" download="dedal.apk" class="button primary">Download</a></li>
 							</ul>
 							<br>
 							<div class="inner">
-								<h3>Tutorial</h3>
-								<p>Installing an APK on an Android device is pretty straightforward. Here's a short tutorial to guide you through the process:</p>
-								<p>STEP 1: Enable unknown sources Before installing an APK, you need to enable the "Unknown sources" option in your device's security settings. This will allow you to install applications from sources other than the Google Play Store. 1:Open your device's "Settings". 2:Scroll down and look for the "Security" or "Biometrics & Security" option. 3:Search for "Unknown sources" and activate it. You may see a warning window, but don't worry, this is normal.</p>
-								<p>STEP 2: Transfer the APK to your device Make sure you've downloaded the APK you want to install. If you download it from your computer, make sure you transfer it to your Android device (via USB cable or online storage, for example).</p>
-								<p>STEP 3: Locate and install the APK, Once you have the APK on your device, follow these steps to install it: 1:Open a file management application on your device (for example, "Files" or "File Manager"). 2:Navigate to the location where you downloaded or saved the APK. 3:Click on the APK to launch the installation process. You may be asked to confirm the installation, so press "Install".</p>
-								<p>STEP 4: Authorize installation (if necessary) Your Android device may ask you to authorize installation from this specific source (the APK file you've downloaded). This is normal for security reasons. 1:If a pop-up window appears, click on "Settings". 2:Activate the switch next to "Allow from this source". 3:Press the "Back" button to return to the installation screen. 4:Click on "Install" again.</p>
+								<h3 id="T3">Tutorial</h3>
+								<p id="t2">Installing an APK on an Android device is pretty straightforward. Here's a short tutorial to guide you through the process:</p>
+								<p id="t3">STEP 1: Enable unknown sources Before installing an APK, you need to enable the "Unknown sources" option in your device's security settings. This will allow you to install applications from sources other than the Google Play Store. 1:Open your device's "Settings". 2:Scroll down and look for the "Security" or "Biometrics & Security" option. 3:Search for "Unknown sources" and activate it. You may see a warning window, but don't worry, this is normal.</p>
+								<p id="t4">STEP 2: Transfer the APK to your device Make sure you've downloaded the APK you want to install. If you download it from your computer, make sure you transfer it to your Android device (via USB cable or online storage, for example).</p>
+								<p id="t5">STEP 3: Locate and install the APK, Once you have the APK on your device, follow these steps to install it: 1:Open a file management application on your device (for example, "Files" or "File Manager"). 2:Navigate to the location where you downloaded or saved the APK. 3:Click on the APK to launch the installation process. You may be asked to confirm the installation, so press "Install".</p>
+								<p id="t6">STEP 4: Authorize installation (if necessary) Your Android device may ask you to authorize installation from this specific source (the APK file you've downloaded). This is normal for security reasons. 1:If a pop-up window appears, click on "Settings". 2:Activate the switch next to "Allow from this source". 3:Press the "Back" button to return to the installation screen. 4:Click on "Install" again.</p>
 							</div>
 							<br>
 							<br>
 							<div class="inner">
-								<h3>More information :</h3>
-								<p>Download our Technical Documentation : <a href="https://docs.google.com/document/d/1dTMjOX0p-fkc2sYHFxXIu1v_VXAseCC50jJXKD9qJLw/edit?usp=drive_link" style="color: red" target="_blank">Dedal Technical Documentation</a></p>
-								<p>Download our User Documentation : <a href="https://docs.google.com/document/d/1r_DdkJpp1o_LQ1U2pZ34RkfSnEJikQw88wCNN2AFbz0/edit?usp=drive_link" style="color: red" target="_blank">Dedal User Documentation</a></p>
+								<h3 id="T4">More information :</h3>
+								<p id="t7">Download our Technical Documentation : <a href="https://docs.google.com/document/d/1dTMjOX0p-fkc2sYHFxXIu1v_VXAseCC50jJXKD9qJLw/edit?usp=drive_link" style="color: red" target="_blank">Dedal Technical Documentation</a></p>
+								<p id="t8">Download our User Documentation : <a href="https://docs.google.com/document/d/1r_DdkJpp1o_LQ1U2pZ34RkfSnEJikQw88wCNN2AFbz0/edit?usp=drive_link" style="color: red" target="_blank">Dedal User Documentation</a></p>
 							</div>
 						</section>
 					</article>
@@ -90,6 +93,47 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const langue = sessionStorage.getItem('langue');
+				if (langue === 'en') {
+      			document.getElementById('M1').innerHTML = "Home"
+   				document.getElementById('M2').innerHTML = "Roadmap"
+      			document.getElementById('M3').innerHTML = "Contact"
+      			document.getElementById('M4').innerHTML = "Download"
+				document.getElementById('T1').innerHTML = "Install our application"
+				document.getElementById('T2').innerHTML = "How do I access your application?"
+				document.getElementById('T3').innerHTML = "Tutorial"
+				document.getElementById('T4').innerHTML = "More information :"
+				document.getElementById('t1').innerHTML = "Nothing could be simpler: just download the Apk from the 'Download' button on this page or on the home page (we recommend you do this from your cell phone). Once you've downloaded the Apk from your cell phone, simply follow the tutorial below to install it."
+				document.getElementById('t2').innerHTML = "Installing an APK on an Android device is pretty straightforward. Here's a short tutorial to guide you through the process:"
+				document.getElementById('t3').innerHTML = "STEP 1: Enable unknown sources Before installing an APK, you need to enable the 'Unknown sources' option in your device's security settings. This will allow you to install applications from sources other than the Google Play Store. 1:Open your device's 'Settings'. 2:Scroll down and look for the 'Security' or 'Biometrics & Security' option. 3:Search for 'Unknown sources' and activate it. You may see a warning window, but don't worry, this is normal."
+				document.getElementById('t4').innerHTML = "STEP 2: Transfer the APK to your device Make sure you've downloaded the APK you want to install. If you download it from your computer, make sure you transfer it to your Android device (via USB cable or online storage, for example)."
+				document.getElementById('t5').innerHTML = "STEP 3: Locate and install the APK, Once you have the APK on your device, follow these steps to install it: 1:Open a file management application on your device (for example, 'Files' or 'File Manager'). 2:Navigate to the location where you downloaded or saved the APK. 3:Click on the APK to launch the installation process. You may be asked to confirm the installation, so press 'Install'."
+				document.getElementById('t6').innerHTML = "STEP 4: Authorize installation (if necessary) Your Android device may ask you to authorize installation from this specific source (the APK file you've downloaded). This is normal for security reasons. 1:If a pop-up window appears, click on 'Settings'. 2:Activate the switch next to 'Allow from this source'. 3:Press the 'Back' button to return to the installation screen. 4:Click on 'Install' again."
+				document.getElementById('t7').innerHTML = "Download our Technical Documentation : "
+				document.getElementById('t8').innerHTML = "Download our User Documentation : "
+				document.getElementById('button').innerHTML = "Download"
+    			} else if (langue === 'fr') {
+      			document.getElementById('M1').innerHTML = "Accueil"
+      			document.getElementById('M2').innerHTML = "Roadmap"
+      			document.getElementById('M3').innerHTML = "Contact"
+      			document.getElementById('M4').innerHTML = "telecharger l'app"
+				document.getElementById('T1').innerHTML = "Installer notre application"
+				document.getElementById('T2').innerHTML = "Comment puis-je accéder à votre application ?"
+				document.getElementById('T3').innerHTML = "Tutoriel"
+				document.getElementById('T4').innerHTML = "Plus d'informations :"
+				document.getElementById('t1').innerHTML = "Rien de plus simple : il suffit de télécharger l'Apk à partir du bouton 'telecharger l'app' sur cette page ou sur la page d'accueil (nous vous recommandons de le faire à partir de votre téléphone portable). Une fois l'Apk téléchargée depuis votre téléphone portable, il vous suffit de suivre le tutoriel ci-dessous pour l'installer."
+				document.getElementById('t2').innerHTML = "L'installation d'un APK sur un appareil Android est assez simple. Voici un petit tutoriel qui vous guidera tout au long du processus :"
+				document.getElementById('t3').innerHTML = "ÉTAPE 1 : Activer les sources inconnues Avant d'installer un APK, vous devez activer l'option 'Sources inconnues' dans les paramètres de sécurité de votre appareil. Cela vous permettra d'installer des applications à partir de sources autres que le Google Play Store. 1:Ouvrez les 'Paramètres' de votre appareil. 2:Faites défiler vers le bas et recherchez l'option 'Sécurité' ou 'Biométrie et sécurité'. 3:Recherchez l'option 'Sources inconnues' et activez-la. Il se peut qu'une fenêtre d'avertissement s'affiche, mais ne vous inquiétez pas, c'est normal."
+				document.getElementById('t4').innerHTML = "ÉTAPE 2 : Transférez l'APK sur votre appareil Assurez-vous d'avoir téléchargé l'APK que vous souhaitez installer. Si vous l'avez téléchargé depuis votre ordinateur, assurez-vous de le transférer sur votre appareil Android (via un câble USB ou un stockage en ligne, par exemple)."
+				document.getElementById('t5').innerHTML = "ÉTAPE 3 : Localiser et installer l'APK, Une fois l'APK sur votre appareil, suivez les étapes suivantes pour l'installer : 1:Ouvrez une application de gestion de fichiers sur votre appareil (par exemple, 'Fichiers' ou 'Gestionnaire de fichiers'). 2:Naviguez jusqu'à l'endroit où vous avez téléchargé ou enregistré l'APK. 3:Cliquez sur l'APK pour lancer le processus d'installation. Il se peut que l'on vous demande de confirmer l'installation, alors appuyez sur 'Installer'."
+				document.getElementById('t6').innerHTML = "ÉTAPE 4 : Autoriser l'installation (si nécessaire) Votre appareil Android peut vous demander d'autoriser l'installation à partir de cette source spécifique (le fichier APK que vous avez téléchargé). C'est normal pour des raisons de sécurité. 1:Si une fenêtre pop-up apparaît, cliquez sur 'Paramètres'. 2:Activez l'interrupteur situé à côté de 'Autoriser à partir de cette source'. 3:Appuyez sur le bouton 'Précédent' pour revenir à l'écran d'installation. 4:Cliquez à nouveau sur 'Installer'."
+				document.getElementById('t7').innerHTML = "Télécharger notre documentation technique :"
+				document.getElementById('t8').innerHTML = "Télécharger notre documentation utilisateur :"
+				document.getElementById('button').innerHTML = "telecharger l'app"
+ 				}
+
+			</script>
 
 	</body>
 </html>
