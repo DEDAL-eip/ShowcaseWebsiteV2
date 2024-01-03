@@ -49,7 +49,7 @@
 							<div class="inner">
 
 								<h3 id="T1"><a href="http://51.145.237.212/faq/question 1"></a></h3>
-								<p id="t1">A roadmap is a project management and strategic planning tool that defines and communicates the objectives, milestones and vision of a project or company over a given period. It's a visual document that presents in chronological order the various steps to be taken to achieve the set objectives.</p>
+								<p id="textFromAPI"></p>
 							</div>
 						</section>
 					</article>
@@ -93,6 +93,28 @@
 				document.getElementById('t1').innerHTML = "Une roadmap est un outil de gestion de projet et de planification stratégique qui définit et communique les objectifs, les étapes et la vision d'un projet ou d'une entreprise sur une période donnée. Il s'agit d'un document visuel qui présente dans l'ordre chronologique les différentes étapes à franchir pour atteindre les objectifs fixés."
   				}
 
+			</script>
+			<script>
+				// Fonction pour récupérer le texte depuis l'API
+				function getTextFromAPI() {
+					fetch('http://51.145.237.212/faq/question 1')
+						.then(response => {
+							if (!response.ok) {
+								throw new Error('La requête n\'a pas abouti');
+							}
+							return response.text(); // Récupérer le texte de la réponse
+						})
+						.then(data => {
+							// Affichage du texte reçu dans la balise HTML
+							document.getElementById('textFromAPI').textContent = data;
+						})
+						.catch(error => {
+							console.error('Une erreur s\'est produite :', error);
+						});
+				}
+			
+				// Appel de la fonction pour récupérer et afficher le texte depuis l'API
+				getTextFromAPI();
 			</script>
 
 	</body>
